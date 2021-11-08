@@ -6,6 +6,8 @@ function getCurrentDate() {
 };
 
 // Object Array to hold information for each timeblock
+// easiest method found to store the time and call a method that will 
+// loop through each block.
 var reminder = [
     
     {   
@@ -74,22 +76,26 @@ for (var i = 0; i < reminder.length; i++) {
     var currentBlock = $('<div>');
     currentBlock.addClass("row");
 
+    // dynmically style through JS and then appending. 
     var reminderHour = $('<div>');
     reminderHour.addClass("col-sm-1 hour");
     reminderHour.text(reminder[i].time + reminder[i].meridiem);
     currentBlock.append(reminderHour);
 
+     // dynmically style through JS and then appending. 
     var textArea = $(`<textarea id="${reminder[i].hour}">`);
     $(textArea).val(localStorage.getItem(`${reminder[i].hour}`));
-    // console.log(localStorage.getItem(`${reminder[i].hour}`));
-    textArea.addClass("col-sm-10 input description");
+ textArea.addClass("col-sm-10 input description");
     currentBlock.append(textArea);
 
+     // dynmically style through JS and then appending. 
     var saveButton = $(`<button id="${reminder[i].hour}"><i class="fas fa-save"></i>`);
     saveButton.addClass("col-sm-1 saveBtn");
     currentBlock.append(saveButton);
     
+     // dynmically style through JS and then appending. 
     timeBlocksContainer.append(currentBlock);
+    
     // Save text area value to localStorage
     $('.saveBtn').on('click', function(){
         var buttonSubmit = $(this).attr('id');
