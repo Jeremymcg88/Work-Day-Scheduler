@@ -22,6 +22,6 @@ HTML, CSS, JavaScript
 
 ## Live & Repository
 
-[Live] (https://jeremymcg88.github.io/Work-Day-Scheduler/)
+[Live](https://jeremymcg88.github.io/Work-Day-Scheduler/)
 
 [Repo](https://github.com/Jeremymcg88/Work-Day-Scheduler)
